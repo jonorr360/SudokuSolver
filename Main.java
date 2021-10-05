@@ -37,7 +37,6 @@ public class Main {
     // Check for Rows
     // checks the entire row to see if any of the numbers are the same
     public static boolean checkRow(int rowIndex, int colIndex, int numAdded){
-        //interate through the board array to check entire row to make sure there are no duplicates of the number
         for(int i = 0; i < ROW_COL; i++){
             if(board[rowIndex][i] == numAdded){
                 return true;
