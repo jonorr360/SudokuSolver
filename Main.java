@@ -69,19 +69,18 @@ public class Main {
         }
         return false;
     }
+    //Ties methods checkRow, checkCol, checkBox all together for one boolean answer
     public static boolean isNumThere(int rowIndex, int colIndex, int numAdded){
         boolean ans1 = checkRow(rowIndex, colIndex, numAdded);
         boolean ans2 = checkCol(rowIndex, colIndex, numAdded);
         boolean ans3 = checkBox(rowIndex, colIndex, numAdded);
-        //System.out.println(ans1 + " " + ans2 + " " + ans3);
         if((ans1 == true)||(ans2 == true)||(ans3 == true))
             return true;
 
         return false;
     }
+
     public static boolean solveBoard(int[][] board){
-        //insert number between 1-9, call isNumTrue, if it is true move to next 0 and repeat process
-        //if isNumTrue returns false, try next number in numPos
         for(int i = 0; i < ROW_COL; i++){
             for(int j = 0; j < ROW_COL; j++){
                 if(board[i][j] == 0){
